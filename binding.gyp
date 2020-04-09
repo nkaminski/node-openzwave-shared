@@ -106,7 +106,7 @@
 					"OPENZWAVE_VALUETYPE_FROM_VALUEID=<!@(grep -r GetTypeAsString <(OZW_INC)/value_classes | wc -l)"
 				],
 				"link_settings": {
-					"libraries": ["-lopenzwave"]
+					"libraries": ["-L<(OZW_LIB_PATH)", "-lopenzwave"]
 				},
 				"include_dirs": [
 					"<!(<(NODE) -p -e \"require('path').dirname(require.resolve('nan'))\")",
